@@ -3,7 +3,7 @@ function Main({ cards }) {
     <div className="cards">
         <div className="cards__container">
             <div className="cards__title-container">
-                <img src="../images/YourCards.png" 
+                <img src="../images/YourCardsES.png" 
                      alt="Your Cards" 
                      className="cards__image-title" />
             </div>

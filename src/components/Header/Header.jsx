@@ -43,7 +43,7 @@ function Header() {
                      className="header__logo" />
             </div>
             <h2 className="header__description">
-                A Dragon Ball battle simulator where you can choose your favorite characters and make them fight across various planets with different soundtracks.
+            Un simulador de batallas de Dragon Ball donde puedes elegir a tus personajes favoritos y hacerlos pelear en varios planetas con diferentes bandas sonoras.
             </h2>
 
             <div className="header__button-container">
