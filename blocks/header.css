@@ -1,5 +1,5 @@
 .header {
-    background-color:black;
+    background-color: orange;
     display: flex  ;
     justify-content: center;
     align-items: center;
@@ -14,9 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 250px;
-    margin-top: 20px;
-
+    max-width: 450px;
+    margin-top: 70px;
 }
 
 .header__logo {
@@ -26,10 +25,11 @@
 
 .header__description {
     font-family: 'My Comic Relief';
-    color: orange;
+    color: black;
     text-align: center;
     padding: 0;
-    margin: 40px 0;
+    margin: 20px 0;
+    font-size: 20px;
 }
 
 .header__button-container {
@@ -37,23 +37,21 @@
     justify-content: space-around;
     align-items: center;
     width: 500px;
-    margin-top: 20px;
 }
 .header__button {
-    background-color: orange;
     color: black;
     font-family: 'My Comic Relief Bold';
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 3px 4px 0px 0px red;
-	background:linear-gradient(to bottom, rgb(255, 187, 0) 5%, orange 100%);
+    box-shadow: 3px 4px 0px 0px black;
+	background:linear-gradient(to bottom, red 5%, red);
 	border-radius:5px;
-	border:1px solid orange;
+	border:1px solid black;
 	font-size:17px;
 	padding:12px 0px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px orange;
+	text-shadow:0px 1px 0px red;
     object-fit: contain;
     width: 150px;
     text-align: center;
