@@ -50,6 +50,14 @@ class API {
         .then(this._checkResponse)
     }
 
+    getPlanetById(id) {
+        return fetch(`${this._options.baseUrl}/planets/${id}`, {
+            method: 'GET',
+            headers: this._options.headers
+        })
+        .then(this._checkResponse)
+    }
+
     getCharacterById(id) {
         return fetch(`${this._options.baseUrl}/characters/${id}`, {
             method: 'GET',
