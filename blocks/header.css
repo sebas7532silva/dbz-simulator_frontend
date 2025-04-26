@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     max-width: 250px;
+    margin-top: 20px;
 
 }
 
@@ -27,6 +28,8 @@
     font-family: 'My Comic Relief';
     color: orange;
     text-align: center;
+    padding: 0;
+    margin: 40px 0;
 }
 
 .header__button-container {
@@ -34,6 +37,7 @@
     justify-content: space-around;
     align-items: center;
     width: 500px;
+    margin-top: 20px;
 }
 .header__button {
     background-color: orange;
