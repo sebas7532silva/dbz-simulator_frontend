@@ -1,8 +1,15 @@
-function Main() {
+function Main({ cards }) {
   return (
-    <div className="content">
-      <h1>Welcome to the Main Component</h1>
-      <p>This is the main content area.</p>
+    <div className="cards">
+        <div className="cards__container">
+            <div className="cards__title-container">
+                <img src="../images/YourCards.png" 
+                     alt="Your Cards" 
+                     className="cards__image-title" />
+            </div>
+
+        </div>
+      
     </div>
   );
 } 
