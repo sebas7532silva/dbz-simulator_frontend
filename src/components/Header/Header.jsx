@@ -6,7 +6,6 @@ import { useState } from 'react';
 function Header() {
     const navigate = useNavigate();
     const location = useLocation();
-    const [isHome, setIsHome] = useState(false);
 
     const goTo = (path) => {
         if (location.pathname !== path) {
@@ -21,7 +20,6 @@ function Header() {
             { label: 'Author', path: '/author' },
             { label: 'Battle', path: '/battle' },
         ];
-        setIsHome(true);
     } else if (location.pathname === '/author') {
         buttons = [
             { label: 'Home', path: '/' },

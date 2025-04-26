@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './Header/Header';
 import api from '../utils/api.js';
 import { useEffect } from 'react';
+import Main from './Main/Main';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
     return (
         <div className="page">
             <Header />
+            <Main />
+
         </div>
     )
 
