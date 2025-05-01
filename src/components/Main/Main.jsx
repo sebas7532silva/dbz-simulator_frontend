@@ -1,7 +1,11 @@
+import { useSearchParams } from "react-router-dom";
 import Card from "../Card/Card";
-function Main({ cards, planets }) {
+import { useState } from "react";
 
-  const goku = cards.find((character) => character.name === "Goku");
+function Main({ cards, planets }) {
+  const [userCards, setUserCards] = useState([]);
+
+  const goku = cards.find((character) => character.name === "Jiren");
 
   return (
     <div className="cards">
