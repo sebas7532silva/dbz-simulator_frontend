@@ -6,32 +6,40 @@ import Main from './Main/Main';
 
 
 function App() {
-    const [count, setCount] = useState(0)
-    const [characters, setCharacters] = useState([])
-    const [planets, setPlanets] = useState([])
+    const [count, setCount] = useState(0);
+    const [characters, setCharacters] = useState([]);
+    const [planets, setPlanets] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     // Get all planets and characters when mounting the component
     useEffect(() => {
-        api.getPlanets()
-            .then((res) => {
-                setPlanets(res);
-            })
-            .catch((err) => {
+        const fetchData = async () => {
+            try {
+                const [planetsResponse, charactersResponse] = await Promise.all([
+                    api.getPlanets(),
+                    api.getCharacters()
+                ]);
+    
+                setPlanets(planetsResponse.items);
+                setCharacters(charactersResponse);
+                setLoading(false); 
+            } catch (err) {
                 console.log(err);
-            });
-        api.getCharacters()
-            .then((res) => {
-                setCharacters(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+                setLoading(false);
+            }
+        };
+    
+        fetchData();
     }, []);
 
     return (
         <div className="page">
             <Header />
-            <Main />
+            {loading ? (
+                <div>Loading...</div> // Mostrar algo mientras carga
+            ) : (
+                <Main cards={characters} planets={planets} />
+            )}
 
         </div>
     )
