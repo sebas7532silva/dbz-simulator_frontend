@@ -16,10 +16,13 @@
 }
 
 .cards__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    justify-items: center;
+    align-items: start;
+  }
+  
 
 .cards__title-container {
     width: 350px;
