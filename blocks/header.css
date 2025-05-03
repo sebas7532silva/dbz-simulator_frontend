@@ -8,6 +8,7 @@
     justify-self: center;
     opacity: 0;
     animation: fadeIn 2.5s ease forwards;
+    height: 100vh;
 }
 
 .header__logo-container {

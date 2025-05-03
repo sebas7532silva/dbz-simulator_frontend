@@ -13,22 +13,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .cards__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px; 
+    gap: 40px; 
     justify-items: center;
     align-items: start;
+    margin-top: 10px
   }
   
 
 .cards__title-container {
     width: 350px;
     margin-top: 20px;
-    
-
 }
 
 .cards__image-title {
@@ -44,7 +45,6 @@
     justify-self: center;
     border: 2px solid orange;
     animation: glow-border 2s infinite alternate;
-    margin-bottom: 50px;
     cursor: pointer;
 }
 
