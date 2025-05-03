@@ -1,0 +1,150 @@
+.battle {
+    width: 100%;
+    background-color: rgb(41, 37, 37);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "My Comic Relief";
+    
+}
+
+.battle__title-container {
+    width: 450px;
+    margin-top: 20px;
+}
+
+.battle__image-title {
+    width: 100%;
+}
+
+.battle__arena {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1100px;
+    height: 440px;
+}
+
+.battle__team-container {
+    background-color: orange;
+    width: 500px;
+    justify-self: center;
+    display: flex;
+    height: 440px;
+    position: relative;
+}
+
+.battle__logo-container {
+    width: 150px;
+    position: relative;
+    margin: auto; 
+    cursor: pointer;
+}
+
+
+.battle__logo {
+    width: 100%;
+}
+
+.battle__mirror {
+    transform: scaleX(-1);
+}
+
+.battle__team-formation {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    justify-content: center;
+}
+
+.battle__team-formation-rival {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.battle__team-member {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 88px;
+    border-color: black;
+    border: 2px solid black; 
+    margin: 0;
+    animation: glow-border 2s infinite alternate; 
+    background-color: lightblue;
+    position: relative;
+}
+
+@keyframes glow-border {
+    0% {
+        box-shadow: 0px 0px 5px 0px black, 0px 0px 15px 5px blue; /* Sombra pequeña y brillante */
+    }
+    50% {
+        box-shadow: 0px 0px 10px 3px black, 0px 0px 30px 10px blue; /* Aumentar brillo */
+    }
+    100% {
+        box-shadow: 0px 0px 5px 0px black, 0px 0px 15px 5px blue; /* Volver a la sombra inicial */
+    }
+}
+
+.battle__member-image-container {
+    height: 70px;
+
+}
+
+.battle__member-image {
+    height: 100%;
+
+}
+
+.battle__full-message {
+    width: 350px;
+    background-color: orange;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glow-border 2s infinite alternate; 
+    
+}
+
+.battle__trash-container {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.battle__trash {
+    width: 12px;
+    height: 20px;
+}
+
+.battle__empty-slot {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    font-family: "My Comic Relief";
+    color: black;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 2px red, 0 0 10px red, 0 0 15px red;
+    }
+    100% {
+        text-shadow: 0 0 2px red, 0 0 20px red, 0 0 30px red;
+    }
+}

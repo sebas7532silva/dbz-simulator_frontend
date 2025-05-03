@@ -5,6 +5,7 @@ import api from '../utils/api.js';
 import { useEffect } from 'react';
 import Main from './Main/Main';
 import Author from './Author/Author';
+import Battle from './Battle/Battle';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -49,6 +50,8 @@ function App() {
                                     userCards={userCards}
                                     setUserCards={setUserCards} />} />
                     <Route path="/author" element={ <Author />} />
+                    <Route path="/battle" element={ <Battle characters={characters}
+                                                            planets={planets}/>} />
                 </Routes>
             )}
 
