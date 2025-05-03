@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import api from '../utils/api.js';
 import { useEffect } from 'react';
 import Main from './Main/Main';
+import Author from './Author/Author';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -46,6 +47,7 @@ function App() {
                                     planets={planets}
                                     userCards={userCards}
                                     setUserCards={setUserCards} />} />
+                    <Route path="/author" element={ <Author />} />
                 </Routes>
             )}
 
