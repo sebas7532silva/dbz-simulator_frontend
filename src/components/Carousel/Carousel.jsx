@@ -20,7 +20,6 @@ const Carousel = ({ cards, userCards, setUserCards }) => {
     if (!userCards.some(userCard => userCard.id === card.id)) {
       
       setUserCards(prevCards => [...prevCards, card]);
-      console.log(userCards);
     }
   };
 

@@ -11,6 +11,7 @@ function App() {
     const [characters, setCharacters] = useState([]);
     const [planets, setPlanets] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [userCards, setUserCards] = useState([]);
 
     // Get all planets and characters when mounting the component
     useEffect(() => {
@@ -40,7 +41,11 @@ function App() {
                 <div>Loading...</div> 
             ) : (
                 <Routes>
-                    <Route path="/" element={<Main cards={characters} planets={planets} />} />
+                    <Route path="/" element={<Main 
+                                    cards={characters} 
+                                    planets={planets}
+                                    userCards={userCards}
+                                    setUserCards={setUserCards} />} />
                 </Routes>
             )}
 

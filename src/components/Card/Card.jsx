@@ -1,10 +1,21 @@
 import { useEffect, useState } from "react";
 import api from "../../utils/api.js";
+import Popup from "../Popup/Popup.jsx";
+import CharacterPopup from "../CharacterPopup/CharacterPopup.jsx";
 
 
 function Card({ character, onDelete }) {
     const [planetId, setPlanetId] = useState({});
     const [planet, setPlanet] = useState({});
+    const [isPopupOpened, setIsPopupOpened] = useState(false);
+
+    function handleSeeMore() {
+        setIsPopupOpened(true);
+    }
+
+    function handlePopupClose() {
+        setIsPopupOpened(false)
+    }
 
     useEffect(() => {
         const fetchPlanetId = async () => {
@@ -61,9 +72,15 @@ function Card({ character, onDelete }) {
             <button
                 className="character__button" 
                 type="button" 
+                onClick={handleSeeMore}
             >
             Ver más
-            </button>    
+            </button> 
+            {isPopupOpened && (<Popup onClose={handlePopupClose} >
+                <CharacterPopup character={character} planet={planet} />
+
+        
+                    </Popup>)}   
         </div>
     );
 }

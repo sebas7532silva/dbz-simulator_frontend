@@ -5,8 +5,7 @@ import Popup from "../Popup/Popup.jsx";
 
 import { useState } from "react";
 
-function Main({ cards, planets }) {
-  const [userCards, setUserCards] = useState([]);
+function Main({ cards, planets, userCards, setUserCards }) {
   const [isCarruselOpen, setIsCarruselOpen] = useState(false);
 
   function handleAddCards() {

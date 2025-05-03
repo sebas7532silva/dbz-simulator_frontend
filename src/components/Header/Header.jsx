@@ -17,18 +17,18 @@ function Header() {
     let buttons = [];
     if (location.pathname === '/') {
         buttons = [
-            { label: 'Author', path: '/author' },
-            { label: 'Battle', path: '/battle' },
+            { label: 'Autor', path: '/author' },
+            { label: 'Batalla', path: '/battle' },
         ];
     } else if (location.pathname === '/author') {
         buttons = [
-            { label: 'Home', path: '/' },
-            { label: 'Battle', path: '/battle' }
+            { label: 'Inicio', path: '/' },
+            { label: 'Batalla', path: '/battle' }
         ];
     } else if (location.pathname === '/battle') {
         buttons = [
-            { label: 'Author', path: '/author' },
-            { label: 'Home', path: '/' }
+            { label: 'Autor', path: '/author' },
+            { label: 'Inicio', path: '/' }
         ];
     }
 

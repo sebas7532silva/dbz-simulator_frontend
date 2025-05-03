@@ -39,6 +39,7 @@
     align-items: center;
     width: 500px;
     margin-bottom: 50px;
+    margin-top: 15px;
 }
 .header__button {
     color: black;
