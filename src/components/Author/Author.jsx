@@ -33,6 +33,21 @@ function Author() {
   <p>Si quieres saber más sobre mí, te invito a visitar mi perfil de LinkedIn y mi repositorio en GitHub.</p>
   <p>¡Saludos!</p>
   <p>F.S.</p>
+  <div className="author__references">
+    <div className="author__image-container">
+        <a href="https://www.linkedin.com/in/fsebsilva" target="_blank">
+            <img src="../images/LinkedIn_icon.svg"
+             className="author__image" />
+        </a>
+    </div>
+    <div className="author__image-container">
+    <a href="https://github.com/sebas7532silva" target="_blank">
+            <img src="../images/GithubLogo.png"
+             className="author__image" />
+        </a>
+    </div>
+
+  </div>
 </div>
 
             </div>

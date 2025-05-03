@@ -24,7 +24,7 @@
     width: 750px;
     display: grid;
     grid-template-columns: 1fr auto;
-    margin-bottom: 125px;
+    margin-bottom: 100px;
     margin-top: 30px;
     column-gap: 50px;
 }
@@ -84,4 +84,22 @@
          1px -1px 0 black,
         -1px  1px 0 black,
          1px  1px 0 black;
+}
+
+.author__references {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    justify-self: center;
+    margin-top: 30px;
+}
+
+.author__image-container {
+    width: 35px;
+}
+
+.author__image {
+    width: 100%;
 }
