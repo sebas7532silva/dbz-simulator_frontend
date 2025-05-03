@@ -1,5 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel.jsx";
+import Popup from "../Popup/Popup.jsx";
+
 import { useState } from "react";
 
 function Main({ cards, planets }) {
@@ -10,7 +13,14 @@ function Main({ cards, planets }) {
     setIsCarruselOpen(true);
   }
 
-  const goku = cards.find((character) => character.name === "Jiren");
+  function handlePopupClose() {
+    setIsCarruselOpen(false);
+  }
+
+  function handleDeleteCard(cardId) {
+    setUserCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
+  }
+  
 
   return (
     <div className="cards">
@@ -26,10 +36,16 @@ function Main({ cards, planets }) {
                           className="cards__image-summon" />
           </div>
       </div>
+      {isCarruselOpen && (<Popup onClose={handlePopupClose} >
+          <Carousel cards={cards} userCards={userCards} setUserCards={setUserCards}/>
+        </Popup>)}
+        
         <div className="cards__container">
-            <Card character={goku} />
+          {userCards.map((card) => (
+            <Card character={card} key={card.id} onDelete={handleDeleteCard} />
+          ))}
+        </div>
 
-        </div>  
     </div>
   );
 } 
