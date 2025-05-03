@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import api from '../utils/api.js';
 import { useEffect } from 'react';
 import Main from './Main/Main';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -36,12 +37,15 @@ function App() {
         <div className="page">
             <Header />
             {loading ? (
-                <div>Loading...</div> // Mostrar algo mientras carga
+                <div>Loading...</div> 
             ) : (
-                <Main cards={characters} planets={planets} />
+                <Routes>
+                    <Route path="/" element={<Main cards={characters} planets={planets} />} />
+                </Routes>
             )}
 
         </div>
+        
     )
 
   
