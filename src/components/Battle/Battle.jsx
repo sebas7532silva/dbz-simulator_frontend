@@ -8,7 +8,8 @@ function Battle({ characters, planets }) {
     const [rivalTeam, setRivalTeam] = useState([]);
     const [selectingFor, setSelectingFor] = useState('user');
     const [isPopupOpen, setIsPopupOpened] = useState(false);
-    const [isTeamFull, setIsTeamFull] = useState(false);
+    const [isSelectingMap, setIsSelectingMap] = useState(false);
+    const [selectedMap, setSelectedMap] = useState(null);
 
     const isUser = selectingFor === 'user';
     const currentTeam = isUser ? userTeam : rivalTeam;
@@ -53,8 +54,8 @@ function Battle({ characters, planets }) {
                         </div>
                     ))}
                     {Array.from({ length: 5 - userTeam.length }).map((_, i) => (
-                        <div key={`empty-${i}`} className="battle__team-member empty-slot">
-                            <span>+</span>
+                        <div key={`empty-${i}`} className="battle__team-member">
+                            <span className="battle__empty-slot">+</span>
                         </div>
                     ))}
                     </div>
@@ -119,7 +120,38 @@ function Battle({ characters, planets }) {
                     ) : null}
 
             </div>
-            
+            <button className="battle__begin-fight"
+                    disabled={userTeam.length === 0 || rivalTeam.length === 0}
+                    onClick={() => setIsSelectingMap(true)}>
+                Pelear       
+            </button>
+
+            {isSelectingMap && (
+            <Popup onClose={() => setIsSelectingMap(false)}>
+                <div className="battle__map-selection">
+                    <h2>Selecciona un campo de batalla</h2>
+                    <div className="battle__map-options">
+                        {planets.map((planet, index) => (
+                            <div
+                                key={index}
+                                className="battle__map-option"
+                                onClick={() => {
+                                    setSelectedMap(planet);
+                                    setIsSelectingMap(false);
+                                }}
+                            >
+                                <img
+                                    src={planet.image}
+                                    alt={planet.name}
+                                    className="battle__map-image"
+                                />
+                                <p>{planet.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Popup>
+        )}   
         </div>
     );
 }
