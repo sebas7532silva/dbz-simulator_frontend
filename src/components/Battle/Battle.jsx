@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import parsePowerLevel from '../../utils/parsePowerLevel.js';
 import Carousel from '../Carousel/Carousel.jsx';
 import Popup from '../Popup/Popup.jsx';
+import FightScene from '../FightScene/FightScene.jsx';
 
 function Battle({ characters, planets }) {
     const [userTeam, setUserTeam] = useState([]);
@@ -20,12 +20,27 @@ function Battle({ characters, planets }) {
         setIsPopupOpened(false);
     }
 
+    const handleEndFight = () => {
+        setFightStarted(false); // Terminar la pelea
+      };
+
     function handleRemoveMember(index, teamType) {
         if (teamType === 'user') {
             setUserTeam(prev => prev.filter((_, i) => i !== index));
         } else if (teamType === 'rival') {
             setRivalTeam(prev => prev.filter((_, i) => i !== index));
         }
+    }
+
+    if (fightStarted && selectedMap) {
+        return (
+            <FightScene
+                userTeam={userTeam}
+                rivalTeam={rivalTeam}
+                selectedMap={selectedMap}
+                handleBackBattle={handleEndFight}
+            />
+        );
     }
 
     return (

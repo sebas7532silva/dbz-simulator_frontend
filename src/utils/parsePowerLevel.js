@@ -19,11 +19,13 @@ function parsePowerLevel(value) {
     value = value.replace(/,/g, '').trim();
 
     // Caso 1: con unidad (ej: "41.25 Quintillion")
-    const unitMatch = value.match(/^([\d.]+)\s+([A-Za-z]+)$/);
+    const unitMatch = value.match(/^([\d.]+)\s+([A-Za-z]+)$/); // Expresión regular sin "i" para no hacer la búsqueda insensible a mayúsculas
     if (unitMatch) {
         const num = parseFloat(unitMatch[1]);
-        const unit = unitMatch[2];
-        return num * (UNITS[unit] || 1);
+        const unit = unitMatch[2]; // No se convierte a minúscula
+        if (UNITS[unit]) {
+            return num * UNITS[unit]; // Se utiliza la unidad tal cual, sin convertir
+        }
     }
 
     // Caso 2: solo número grande con puntos (ej: "2.000.000")
