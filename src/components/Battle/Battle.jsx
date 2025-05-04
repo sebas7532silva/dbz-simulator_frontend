@@ -10,6 +10,7 @@ function Battle({ characters, planets }) {
     const [isPopupOpen, setIsPopupOpened] = useState(false);
     const [isSelectingMap, setIsSelectingMap] = useState(false);
     const [selectedMap, setSelectedMap] = useState(null);
+    const [fightStarted, setFightStarted] = useState(false);
 
     const isUser = selectingFor === 'user';
     const currentTeam = isUser ? userTeam : rivalTeam;
@@ -120,12 +121,14 @@ function Battle({ characters, planets }) {
                     ) : null}
 
             </div>
-            <button className="battle__begin-fight"
-                    disabled={userTeam.length === 0 || rivalTeam.length === 0}
-                    onClick={() => setIsSelectingMap(true)}>
-                Pelear       
-            </button>
-
+            {userTeam.length > 0 && rivalTeam.length > 0 && (
+                <button
+                    className="battle__begin-fight"
+                    onClick={() => setIsSelectingMap(true)}
+                >
+                    Pelear
+                </button>
+                )}
             {isSelectingMap && (
             <Popup onClose={() => setIsSelectingMap(false)}>
                 <div className="battle__map-selection">
@@ -138,6 +141,7 @@ function Battle({ characters, planets }) {
                                 onClick={() => {
                                     setSelectedMap(planet);
                                     setIsSelectingMap(false);
+                                    setFightStarted(true);
                                 }}
                             >
                                 <img

@@ -1,7 +1,7 @@
 .battle {
     width: 100%;
     background-color: rgb(41, 37, 37);
-    height: 800px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,7 +168,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 3px 4px 0px 0px black;
-    background:linear-gradient(to bottom, orange 5%, orange);
+    background:linear-gradient(to bottom, red 5%, red);
     border-radius:5px;
     border:1px solid black;
     font-size:17px;
@@ -178,8 +178,9 @@
     object-fit: contain;
     width: 150px;
     text-align: center;
-    margin-top: 30px;
     animation: glow-border-red 2s infinite alternate; 
+    position: relative;
+    top: -240px;
 }
 
 .battle__map-selection {
