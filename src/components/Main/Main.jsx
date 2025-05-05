@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import Card from "../Card/Card";
-import Carousel from "../Carousel/Carousel.jsx";
-import Popup from "../Popup/Popup.jsx";
+import Carousel from "../Carousel/Carousel";
+import Popup from "../Popup/Popup";
 import Preloader from '../Preloader/Preloader';
 import { useState, useEffect } from "react";
 

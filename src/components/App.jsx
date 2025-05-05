@@ -7,6 +7,7 @@ import Main from './Main/Main';
 import Author from './Author/Author';
 import Battle from './Battle/Battle';
 import Preloader from './Preloader/Preloader';
+import Music from './Music/Music';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -40,6 +41,7 @@ function App() {
 
     return (
         <div className="page">
+            <Music />
             <Header />
             {loading ? (
                 <Preloader /> 

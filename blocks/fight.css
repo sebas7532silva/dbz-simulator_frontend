@@ -79,8 +79,7 @@
 
 
 .fight__character-container {
-    width: 60px; 
-    max-width: 80px;
+    width: 75px; 
     position: relative;
     animation-duration: 3s;  
     animation-timing-function: ease-in-out;
