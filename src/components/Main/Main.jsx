@@ -2,11 +2,12 @@ import { useSearchParams } from "react-router-dom";
 import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel.jsx";
 import Popup from "../Popup/Popup.jsx";
-
-import { useState } from "react";
+import Preloader from '../Preloader/Preloader';
+import { useState, useEffect } from "react";
 
 function Main({ cards, planets, userCards, setUserCards }) {
   const [isCarruselOpen, setIsCarruselOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   function handleAddCards() {
     setIsCarruselOpen(true);
@@ -19,6 +20,13 @@ function Main({ cards, planets, userCards, setUserCards }) {
   function handleDeleteCard(cardId) {
     setUserCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+    }, []);
+
+  if (loading) return <Preloader />;
   
 
   return (

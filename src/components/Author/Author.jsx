@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react";
+import Preloader from '../Preloader/Preloader';
 
 function Author() {
     const [isAnime, setIsAnime] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     function handleTransform() {
         setIsAnime(!isAnime);
     }
     
     let imageTransform = isAnime ? "../images/MeDB.png" : "../images/Me.jpg";
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <Preloader />;
 
 
     return (

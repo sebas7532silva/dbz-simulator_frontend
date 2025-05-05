@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Carousel from '../Carousel/Carousel.jsx';
 import Popup from '../Popup/Popup.jsx';
 import FightScene from '../FightScene/FightScene.jsx';
+import Preloader from '../Preloader/Preloader';
 
 function Battle({ characters, planets }) {
     const [userTeam, setUserTeam] = useState([]);
@@ -11,6 +12,7 @@ function Battle({ characters, planets }) {
     const [isSelectingMap, setIsSelectingMap] = useState(false);
     const [selectedMap, setSelectedMap] = useState(null);
     const [fightStarted, setFightStarted] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const isUser = selectingFor === 'user';
     const currentTeam = isUser ? userTeam : rivalTeam;
@@ -31,6 +33,13 @@ function Battle({ characters, planets }) {
             setRivalTeam(prev => prev.filter((_, i) => i !== index));
         }
     }
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <Preloader />;
 
     if (fightStarted && selectedMap) {
         return (
@@ -156,7 +165,11 @@ function Battle({ characters, planets }) {
                                 onClick={() => {
                                     setSelectedMap(planet);
                                     setIsSelectingMap(false);
-                                    setFightStarted(true);
+                                    setLoading(true);
+                                    setTimeout(() => {
+                                        setFightStarted(true);
+                                        setLoading(false);
+                                    }, 1000);
                                 }}
                             >
                                 <img
