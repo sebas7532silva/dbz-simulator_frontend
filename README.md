@@ -1,12 +1,36 @@
-# React + Vite
+# 🐉 DB Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DB Simulator** es una app web que simula batallas épicas entre personajes del universo **Dragon Ball**. Puedes explorar cartas, ver sus transformaciones y enfrentarlos en el campo de batalla.
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎴 Visualiza y agrega cartas de personajes de Dragon Ball.
+- 🔁 Observa sus transformaciones icónicas.
+- ⚔️ Hazlos pelear en un simulador de batalla.
+- 🔊 Incluye música para ambientar las peleas.
+- 📱 Diseño responsivo: funciona en computadoras, tablets y móviles.
+- 🔌 Conectado a una API gratuita desarrollada por [Antonio Álvarez](https://github.com/antonioalvarez) (¡gracias!).
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**
+- **JavaScript**
+- **HTML**
+- **CSS**
+
+## 🚀 Cómo ejecutar la aplicación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/db-simulator.git
+   cd db-simulator
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+
+3. Inicia la app en modo desarrollo:
+   ```bash
+   npm run dev
+
+4. Abre tu navegador y visita http://localhost:5173 (o el puerto indicado en consola).
