@@ -9,7 +9,7 @@
 - ⚔️ Hazlos pelear en un simulador de batalla.
 - 🔊 Incluye música para ambientar las peleas.
 - 📱 Diseño responsivo: funciona en computadoras, tablets y móviles.
-- 🔌 Conectado a una API gratuita desarrollada por [Antonio Álvarez](https://github.com/antonioalvarez) (¡gracias!).
+- 🔌 Conectado a una API gratuita desarrollada por Antonio Álvarez (¡gracias!).
 
 ## 🛠️ Tecnologías utilizadas
 
