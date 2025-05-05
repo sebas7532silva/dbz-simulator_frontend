@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Main from './Main/Main';
 import Author from './Author/Author';
 import Battle from './Battle/Battle';
+import Preloader from './Preloader/Preloader';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -41,7 +42,7 @@ function App() {
         <div className="page">
             <Header />
             {loading ? (
-                <div>Loading...</div> 
+                <Preloader /> 
             ) : (
                 <Routes>
                     <Route path="/" element={<Main 
