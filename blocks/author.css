@@ -23,7 +23,7 @@
 .author__information-container {
     width: 750px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 2fr;
     margin-bottom: 100px;
     margin-top: 30px;
     column-gap: 50px;
@@ -151,4 +151,22 @@
     }
 
 
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .author__information-container {
+        max-width: 600px;
+    }
+
+    .author__card {
+        max-width: 350px;
+    }
+
+    .author__description {
+        width: auto;
+    }
+
+    .author__references {
+        width: 150px;
+    }
 }

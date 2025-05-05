@@ -313,3 +313,37 @@
 
 
 }
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .battle {
+        height: 560px;
+    }
+
+    .battle__arena {
+        max-width: 90vw;
+    }
+
+    .battle__team-container {
+        max-width: 405px;
+        width: 90%;
+        max-height: 405px;
+        height: 80%;
+    }
+    .battle__logo-container {
+        max-width: 100px;
+    }
+
+    .battle__logo {
+        width: 90%;
+    }
+
+    .battle__begin-fight {
+        top: -260px;
+    }
+
+    .battle__map-image {
+        width: 75px;
+    }
+
+
+}

@@ -149,3 +149,25 @@
 
 
 }
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+
+  .carousel-card {
+    max-width: 200px;
+    max-height: 300px;
+    margin: 0;
+  }
+
+  .carousel__image-container {
+    max-width: 100px;
+    max-height: 200px;
+  }
+
+  .carousel__add-button {
+    top: 220px;
+    width: auto + 10px;
+
+  }
+
+
+}

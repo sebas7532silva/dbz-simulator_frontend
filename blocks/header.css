@@ -8,7 +8,7 @@
     justify-self: center;
     opacity: 0;
     animation: fadeIn 2.5s ease forwards;
-    height: 100vh;
+    height: auto;
 }
 
 .header__logo-container {
@@ -68,7 +68,7 @@
 
 @media (max-width: 600px) {
     .header {
-        height: 80vw;
+        height: auto;
 
     }
     .header__logo-container {
@@ -85,3 +85,18 @@
         gap: 20px;
     }
   }
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+
+    .header {
+        height: auto;
+    }
+    .header__logo-container {
+        max-width: 40vw;
+    }
+
+    .header__description {
+        margin: 40px 20px 20px;
+    }
+
+}

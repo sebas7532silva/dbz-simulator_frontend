@@ -163,3 +163,21 @@
         top: 135px;
     }
   }
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .character__container {
+        width: 200px;
+        height: 275px;
+    }
+
+    .character__button {
+        top: 250px;
+    }
+
+    .character__image-container {
+        width: 90px;
+        height: 175px;
+    }
+
+
+}
