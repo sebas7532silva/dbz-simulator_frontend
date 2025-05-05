@@ -47,7 +47,6 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Main 
                                     cards={characters} 
-                                    planets={planets}
                                     userCards={userCards}
                                     setUserCards={setUserCards} />} />
                     <Route path="/author" element={ <Author />} />

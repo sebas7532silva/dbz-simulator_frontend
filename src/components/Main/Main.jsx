@@ -5,7 +5,7 @@ import Popup from "../Popup/Popup.jsx";
 import Preloader from '../Preloader/Preloader';
 import { useState, useEffect } from "react";
 
-function Main({ cards, planets, userCards, setUserCards }) {
+function Main({ cards, userCards, setUserCards }) {
   const [isCarruselOpen, setIsCarruselOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
