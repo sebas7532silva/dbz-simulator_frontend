@@ -133,3 +133,33 @@
 .character__stats-container {
     display: flex;
 }
+
+@media (max-width: 600px) {
+    .character__container {
+        width: 100px;
+        height: 150px;
+    }
+
+    .character__image-container {
+        width: 40px;
+        height: 105px;
+    }
+
+    .character__name {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .character__trash-container {
+        width: 10px;
+        margin: 0;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    .character__button {
+        font-size: 12px;
+        padding: 6px 0px;
+        width: 75px;
+        top: 135px;
+    }
+  }

@@ -65,3 +65,24 @@
     width: 100%;
 }
 
+@media (max-width: 600px) {
+    .cards__header-container {
+        margin: 0;
+    }
+    .cards__title-container {
+      max-width: 200px;
+    }
+
+    .cards__summon-container {
+        max-width: 30px;
+        display: flex;
+      }
+    .cards__image-summon {
+        justify-self: center;
+        align-self: center;
+    }
+    .cards__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
