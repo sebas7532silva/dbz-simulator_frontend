@@ -46,5 +46,18 @@
       text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange;
     }
   }
+
+@media (max-width: 600px) {
+  .popup__overlay {
+    align-items: flex-start;
+  }
+
+  .popup__content {
+    top: 125px;
+  }
+
+  .popup__close {
+    right: 15px;
+  }
   
-  
+}

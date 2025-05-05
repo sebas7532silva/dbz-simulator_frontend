@@ -14,7 +14,7 @@
 .footer__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     box-sizing: border-box;
     width: 100%;
     max-width: 1000px;
@@ -36,4 +36,16 @@
     text-decoration: none;
     margin-left: 5px;
     color: orange;
+}
+
+@media (max-width: 600px) {
+    .footer__text {
+        font-size: 12px;
+    }
+
+    .footer {
+        height: 100px;
+    }
+
+
 }

@@ -103,3 +103,52 @@
 .author__image {
     width: 100%;
 }
+
+@media (max-width: 600px) { 
+    .author__title-container {
+        width: 150px;
+    }
+
+    .author__information-container {
+        width: 348px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .author__description {
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .author__card {
+        width: 150px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0px 0px 5px 0px orange; 
+        border: 2px solid orange; 
+        position: relative;
+        animation: glow-border 2s infinite alternate; 
+    }
+
+    .author__transform {
+        top: 100px;
+        font-size: 8px;
+        width: 50%;
+        padding: 8px;
+    }
+
+    .author {
+        max-height: auto;
+    }
+
+    .author__information-container {
+        margin-bottom: 40px;
+    }
+
+
+}

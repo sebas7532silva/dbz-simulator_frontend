@@ -83,9 +83,7 @@ function FightScene({ userTeam, rivalTeam, selectedMap, handleBackBattle }) {
              style={{
                 backgroundImage: selectedMap ? `url(${selectedMap.image})` : 'none',
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '100vh',
-                width: '100vw',
+                backgroundPosition: 'center'
             }}>
             
             <div className="fight-scene__teams">

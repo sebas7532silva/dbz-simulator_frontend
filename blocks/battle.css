@@ -220,3 +220,96 @@
     border-radius: 8px;
     border: 2px solid #ccc;
 }
+
+@media (max-width: 600px) {
+    .battle__arena {
+        width: 90vw;
+        height: 150px;
+    }
+
+    .battle__team-container {
+        width: 160px;
+        height: 150px;
+    }
+
+    .battle__team-member {
+        width: 40px;
+        height: 30px;
+    }
+
+    .battle__logo-container {
+        width: 70px;
+        position: relative;
+        margin: auto; 
+        cursor: pointer;
+    }
+
+    .battle__empty-slot {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        font-family: "My Comic Relief";
+        color: black;
+        animation: glow 1.5s infinite alternate;
+    }
+
+    .battle__title-container {
+        width: 80vw;
+        margin-bottom: 20px;
+    }
+
+    .battle {
+        height: 300px;
+    }
+    
+    .battle__member-image-container {
+        height: auto;
+        width: 15px;
+    }
+
+    .battle__member-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .battle__trash-container {
+        position: absolute;
+        top: -4px;
+        right: 2px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .battle__trash {
+        width: 6px;
+        height: 10px;
+    }
+
+    .battle__begin-fight {
+        font-size: 10px;
+        padding: 6px 0px;
+        width: 75px;
+        top: -90px;
+    }
+
+    .battle__map-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #ccc;
+    }
+
+    .battle__map-option {
+        font-size: 10px;
+    }
+
+    .battle__full-message {
+        width: 150px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+
+}
