@@ -41,9 +41,8 @@ const Music = () => {
           onClick={() => setShowPopup(true)}
           aria-label="Music Player"
         >
-          <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 width="800px" height="800px" viewBox="0 0 387.468 387.467"
-	 xml:space="preserve">
+          <svg fill="#000000" version="1.1" id="Capa_1"
+	 width="800px" height="800px" viewBox="0 0 387.468 387.467">
         <g>
             <path d="M193.735,158.509c19.452,0,35.229,15.771,35.229,35.225c0,19.452-15.777,35.222-35.229,35.222
                 c-19.454,0-35.224-15.77-35.224-35.222C158.512,174.28,174.281,158.509,193.735,158.509z"/>
